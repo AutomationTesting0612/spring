@@ -1,0 +1,33 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="Address" class ="com.spring.nonprimitive.Address">
+        <property name="houseNumber" value="32424"/>
+        <property name="state" value="H.P"/>
+        <property name="country" value="India"/>
+
+    </bean>
+
+    <bean name ="Person" class="com.spring.nonprimitive.Person">
+        <property name="name" value="Shivam"/>
+        <property name="age" value="25"/>
+        <property name="phoneNumber">
+            <list>
+                <value>3424252</value>
+                <value>42232342432</value>
+                <value>3453535353</value>
+            </list>
+        </property>
+
+        <property name="address" ref="Address"/>
+
+
+
+
+    </bean>
+
+
+
+</beans>
