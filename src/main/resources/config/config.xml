@@ -3,24 +3,17 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
  https://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean name="Student" class="com.spring.pojo.Student">
 
-      <property name="name">
-          <value>Suryansh</value>
+    <bean name="address" class="com.spring.annotation.Address">
+        <property name="state" value="HP"/>
+        <property name="country" value="India"/>
+    </bean>
 
-      </property>
-
-        <property name="age">
-            <value>24</value>
-        </property>
-
-        <property name="num">
-            <value>56, 89, 78, 90</value>
-
-        </property>
+    <bean name="person" class="com.spring.annotation.Person">
+        <property name="age" value="20"/>
+        <property name="address" ref="address"/>
 
 
-<!--        IOC container can create the object of those classes which have beans -->
     </bean>
 
 </beans>

@@ -1,6 +1,6 @@
 package com.spring.springlearning;
 
-import com.spring.nonprimitive.Person;
+import com.spring.autowireannotaion.Person;
 import com.spring.pojo.Student;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,13 +11,16 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class SpringLearningApplication {
 
 	public static void main(String[] args) {
-//		ApplicationContext context = new ClassPathXmlApplicationContext("config/config.xml");
-//		Student student1 = (Student) context.getBean("Student");
-//		System.out.println(student1);
+		ApplicationContext context = new ClassPathXmlApplicationContext("config/springautowireannotation.xml");
+		Person student1 = (Person) context.getBean("person");
+		System.out.println(student1);
 
-		ApplicationContext context =new ClassPathXmlApplicationContext("springcongig/springconfig.xml");
-		Person person = (Person) context.getBean("Person");
-		System.out.println(person);
+//		ApplicationContext context =new ClassPathXmlApplicationContext("springcongig/springconfig.xml");
+//		ApplicationContext context =new ClassPathXmlApplicationContext("config/springannotation.xml");
+//		Person person = context.getBean("person", Person.class);
+////		person.setAge(123);
+//		person.setAddress(new );
+//		System.out.println(person);
 
 	}
 

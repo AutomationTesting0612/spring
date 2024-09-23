@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config />
+    <bean id="address" class="com.spring.qualifier.Address" name="address">
+        <property name="state" value="California" />
+        <property name="country" value="USA" />
+    </bean>
+
+    <bean id="address31" class="com.spring.qualifier.Address" name="address1">
+        <property name="state" value="London" />
+        <property name="country" value="UK" />
+    </bean>
+
+
+    <bean name="person" class="com.spring.qualifier.Person" >
+        <property name="age" value="24" />
+<!--        <property name="address" ref="address"/>-->
+    </bean>
+
+</beans>
+
